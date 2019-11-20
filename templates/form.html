@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Estado patente</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='form/images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form/css/main.css') }}">
+	<link rel="icon" href="{{ url_for('static', filename='images/logo-muni.png') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+<img alt="Muni" src="https://municipalidadestacioncentral.cl/wp-content/uploads/2017/12/logo-muni.png" class="center">
+
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form action = "/result" method = "POST" class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Estado de tu patente
+				</span>
+
+				<span class="contact100-form-text">
+				RUT de tu empresa sin puntos y con guión. Ejemplo: 24357963-2
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate = "RUT">
+					<input class="input100" type="int" name="rut" placeholder="RUT. Ejemplo: 24357963-k", pattern="^[0-9]+-[0-9kK]+">
+					<span class="focus-input100"></span>
+				</div>
+
+				<span class="contact100-form-text">
+				Ingresa el identificador entregado. Ejemplo: 134
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate = "Identificador">
+					<input class="input100" type="int" name="id" placeholder="Identificador entregado. Ejemplo: 134", pattern="^[0-9]+">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Obtener estado
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div style="position: center;background-color: rgba(218, 213, 213, 0.849);">
+
+		<div style="text-align: center; bottom: 5px;color: rgba(138, 135, 135, 0.849);">
+			Municipalidad de Estación Central | 2019
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='form/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='form/vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='form/js/main.js') }}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
