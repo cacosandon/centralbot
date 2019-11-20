@@ -12,7 +12,7 @@ requests = "*"
 gunicorn = "*"
 gspread = "*"
 oauth2client = "*"
-APScheduler = "3.0.0"
+APScheduler = "*"
 
 [requires]
 python_version = "3.6"
