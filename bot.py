@@ -6,7 +6,7 @@ from credentials import mail, password
 import smtplib, ssl
 from email.mime.text import MIMEText
 
-sched = BlockingScheduler()
+sched = BlockingScheduler(timezone="America/Santiago")
 
 @sched.scheduled_job('cron', hour=14)
 def task():
